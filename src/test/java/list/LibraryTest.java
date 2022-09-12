@@ -44,5 +44,4 @@ public class LibraryTest extends BookTestHelper{
         Assertions.assertEquals(1, result.size());
         Assertions.assertIterableEquals(expected, result);
     }
-
 }
