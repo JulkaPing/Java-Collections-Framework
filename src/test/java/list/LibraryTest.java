@@ -13,7 +13,7 @@ public class LibraryTest extends BookTestHelper{
     private final StoreBook library = new Library();
 
     /**
-     * Добавить в библиотеку книги перед выполнением теста.
+     * Р”РѕР±Р°РІРёС‚СЊ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ РєРЅРёРіРё РїРµСЂРµРґ РІС‹РїРѕР»РЅРµРЅРёРµРј С‚РµСЃС‚Р°.
      */
     @BeforeEach
     public void addAllBooksInLibrary() {
