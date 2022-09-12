@@ -14,7 +14,12 @@ public class Library implements StoreBook {
 
     @Override
     public List<Book> findAllByNamed(String criteria) {
-
-        return List.of();
+        List<Book> result = new ArrayList<>();
+        for (Book book: books) {
+            if (book.getNamedBook().toLowerCase().contains(criteria.toLowerCase())) {
+                result.add(book);
+            }
+        }
+        return result;
     }
 }

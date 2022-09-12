@@ -1,8 +1,6 @@
 package bank;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class BankService {
 
@@ -11,14 +9,17 @@ public class BankService {
     /**
      * Метод добавляет пользователя, изначательно у пользователя 0 счетов
      */
-    public boolean addUser() {
-        return false;
+    public boolean addUser(User user) {
+        List<Account> accounts = new ArrayList<>();
+        users.put(user, accounts);
+        return true;
     }
 
     /**
      * Метод добавляет счет пользователю
      */
-    public boolean addAccount() {
+    public boolean addAccount(Account account) {
+
         return false;
     }
 
@@ -44,8 +45,6 @@ public class BankService {
         return false;
     }
 
-
-
     /**
      * Метод удаляет счет пользователя, если на счету лежат деньги, то их нужно перевести на рандомный
      * любой другой счет пользователя, если же такого счета не существует, то отменить операцию.
@@ -63,6 +62,7 @@ public class BankService {
      * @return счет пользователя
      */
     public Account findByRequisite(String passport, String requisite) {
+
         return null;
     }
 
@@ -72,6 +72,12 @@ public class BankService {
      * @return пользователь
      */
     public User findByPassport(String passport) {
+
+        for (User user: users.keySet()) {
+            if (user.getPassport().equals(passport)) {
+                return user;
+            }
+        }
         return null;
     }
 }
