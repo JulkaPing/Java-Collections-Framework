@@ -5,12 +5,11 @@ import java.util.*;
 public class BankService {
 
     private final Map<User, List<Account>> users = new HashMap<>();
-
+    List<Account> accounts = new ArrayList<>();
     /**
      * Метод добавляет пользователя, изначательно у пользователя 0 счетов
      */
     public boolean addUser(User user) {
-        List<Account> accounts = new ArrayList<>();
         users.put(user, accounts);
         return true;
     }
@@ -18,10 +17,16 @@ public class BankService {
     /**
      * Метод добавляет счет пользователю
      */
-    public boolean addAccount(Account account) {
+    /*public boolean addAccount(Account account) {
+        for (Map.Entry<User, List<Account>> entry: users.entrySet()) {
+            if (entry.getValue().isEmpty()) {
+                users.putAll(users, account.getRequisite());
+            }
+        }
 
-        return false;
-    }
+
+        return true;
+    }*/
 
     /**
      * Метод добавляет деньги на счет пользователя

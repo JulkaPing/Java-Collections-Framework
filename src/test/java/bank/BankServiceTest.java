@@ -1,11 +1,13 @@
 package bank;
 
 import list.*;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,14 +21,21 @@ public class BankServiceTest {
 
     private final BankService bankService = new BankService();
 
-   /* @Test
+    @Test
     public void addUserTest() {
+        bankService.addUser(new User("Alla", "125478"));
+        Assertions.assertNotNull(bankService.findByPassport("125478"));
 
-        List<User> result = bankService.findByPassport(isNull);
-        List<User> expected = List.of();
+        System.out.println(getUsers());
+    }
 
-        Assertions.assertEquals(2, result.size());
-        //Assertions.assertIterableEquals(expected, result);
+   /* @Test
+    public void addAccount() {
+        bankService.addAccount(new Account("8769548587266954858726", 0));
+
+        Assertions.assertIterableEquals((bankService.findByRequisite("125478", "8769548587266954858726")).);
+        System.out.println(bankService.addAccount(new Account("8769548587266954858726", 0)));
+
     }*/
 
 }

@@ -35,5 +35,4 @@ public class CookiesUtilsTest {
         Assertions.assertEquals(resultByAuthId.getCookie(), new Cookie("authid", "sdsdsd-vkkskds-sdssf-883"));
         Assertions.assertArrayEquals(resultByAuthId.getFlags(), Flag.values());
     }
-
 }
