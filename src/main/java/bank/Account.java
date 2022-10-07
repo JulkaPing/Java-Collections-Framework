@@ -29,6 +29,13 @@ public class Account {
         this.balance = balance;
     }
 
+    public void upBalance(double money) {
+        this.balance += money;
+    }
+
+    public void withDrawMoney(double money) {
+        this.balance -= money;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
